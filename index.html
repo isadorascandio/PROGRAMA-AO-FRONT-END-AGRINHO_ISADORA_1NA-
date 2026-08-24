@@ -1,80 +1,168 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isadora Scandio</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f5d9f7;
+            font-family: Arial, sans-serif;
+        }
+
         header {
-            background-color: #da59e6
-            color:#FFB8FD
+            background-color: #da59e6;
+            color: #FFB8FD;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            border: 5px solid #160101
+            margin: 30px auto 0;
+            padding: 25px;
+            border: 5px solid #160101;
+            border-radius: 10px 10px 0 0;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+
+        header p {
+            margin: 0;
+            line-height: 1.6;
         }
 
         main {
             background-color: #000000;
             color: rgb(248, 166, 255);
             max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            display: flex;
+            margin: 0 auto 30px;
+            padding: 25px;
+            border: 5px solid #160101;
+            border-top: none;
         }
-        .artigo-autor{
+
+        .post {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .post-conteudo {
+            flex: 1;
+        }
+
+        .post-conteudo h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .post-conteudo p {
+            margin: 0 0 15px 0;
+            line-height: 1.7;
+        }
+
+        .artigo-autor {
             font-weight: bold;
         }
+
         img {
-        width: 80px;
-        height: 80px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 3px solid #da59e6;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #da59e6;
+            color: white;
+            border: 2px solid #FFB8FD;
+            border-radius: 8px;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
-       <header>
-        <main>
-    <h1>scandio nails</h1>
-    <p>Vou compartilhar conhecimentos sobre unhas e explicar sobre tecnicas para poder facilitar a vida de muitas
-        pessoas</p>
+
+    <header>
+        <h1>scandio nails</h1>
+
+        <p>
+            Vou compartilhar conhecimentos sobre unhas e explicar sobre técnicas
+            para poder facilitar a vida de muitas pessoas.
+        </p>
     </header>
+
     <main>
-        <img src="imagem-blond.png" alt="Close de mão com unha decorada em estilo pastel e traços em dourados">
+        <article class="post">
 
-    <h2>Meu primeiro post</h2>
-    <p>Olá! Seja muito bem-vindo(a) ao meu blog!
-        <div> 
+            <img src="imagem-blond.png"
+                alt="Close de mão com unha decorada em estilo pastel e traços em dourados">
 
+            <div class="post-conteudo">
 
-        Aqui você vai encontrar dicas de cuidados com as unhas, inspirações de nail art, tendências de esmaltes, passo a
-        passo de decorações e muito mais.
+                <h2>Meu primeiro post</h2>
 
-        Sou apaixonada pelo mundo das unhas e criei este espaço para compartilhar ideias, aprender junto com vocês e
-        ajudar quem ama ter unhas lindas e bem cuidadas.
+                <p>
+                    Olá! Seja muito bem-vindo(a) ao meu blog!
+                </p>
 
-        Nos próximos posts vou trazer:
+                <p>
+                    Aqui você vai encontrar dicas de cuidados com as unhas,
+                    inspirações de nail art, tendências de esmaltes, passo a
+                    passo de decorações e muito mais.
+                </p>
 
-        Dicas para fortalecer as unhas.
-        Tendências de esmaltes.
-        Decorações fáceis para fazer em casa.
-        Cuidados com cutículas.
-        Inspirações para todas as ocasiões.
-        Espero que vocês gostem desse novo espaço! Deixe um comentário contando qual estilo de unha você mais ama.
-        <button>💜<span>0</span>/button>
-        </div>
+                <p>
+                    Sou apaixonada pelo mundo das unhas e criei este espaço para
+                    compartilhar ideias, aprender junto com vocês e ajudar quem
+                    ama ter unhas lindas e bem cuidadas.
+                </p>
 
-        </main>
-    </p>
- </body>
-<script>
- const botao= document.querySelector("button");
- botao.addEventListener("click",botaoClicado);
+                <p>
+                    Nos próximos posts vou trazer:
+                </p>
 
- function botaoClicado(){
-    console.log ("fui clicado");
- }
-</script>
+                <p>
+                    Dicas para fortalecer as unhas.<br>
+                    Tendências de esmaltes.<br>
+                    Decorações fáceis para fazer em casa.<br>
+                    Cuidados com cutículas.<br>
+                    Inspirações para todas as ocasiões.
+                </p>
+
+                <p>
+                    Espero que vocês gostem desse novo espaço! Deixe um comentário
+                    contando qual estilo de unha você mais ama.
+                </p>
+
+                <button>💜 <span>0</span></button>
+
+            </div>
+
+        </article>
+    </main>
+
+    <script>
+        const botao = document.querySelector("button");
+
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+        }
+    </script>
+
+</body>
+</html>
